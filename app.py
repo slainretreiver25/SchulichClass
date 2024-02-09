@@ -24,8 +24,8 @@ df = df.loc[startDate:endDate]
 
 #Create a chart
 fig = px.line(df, y='Adj Close')
-#Outout
+#Output
 st.title("Web APP - Schulich Class")
 st.plotly_chart(fig) #output plotly graph
-st.write(df) #Its like print option, but it will show it in the app
+st.table(df).set_width(800) #Its like print option, but it will show it in the app
 
