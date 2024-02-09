@@ -22,7 +22,6 @@ startDate = st.sidebar.date_input("Enter Start Date:", df.index.min(), format="Y
 endDate = st.sidebar.date_input("Enter End Date:", df.index.max(), format="YYYY-MM-DD")
 df = df.loc[startDate:endDate]
 
-
 #Create a chart
 fig = px.line(df, y='Adj Close')
 #Outout
