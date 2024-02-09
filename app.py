@@ -12,7 +12,7 @@ import plotly.express as px
 
 #Grab data
 ticker = st.sidebar.selectbox("Choose a stock:", ['AAPL','DIS','NKE','MCD','MMM','XOM','SP500'])
-df = pd.read_csv('StockData/' +ticker + '.csv', parse_dates=['Date'],index_col=['Date'])
+df = pd.read_csv(ticker + '.csv', parse_dates=['Date'],index_col=['Date'])
 
 #Filter the data
 year = st.sidebar.selectbox("Pick a year", [2013,2014,2015,2016,2017])
