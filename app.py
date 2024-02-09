@@ -15,7 +15,8 @@ ticker = st.sidebar.selectbox("Choose a stock:", ['AAPL','DIS','NKE','MCD','MMM'
 df = pd.read_csv(ticker + '.csv', parse_dates=['Date'],index_col=['Date'])
 
 #Filter the data
-year = st.sidebar.selectbox("Pick a year", [2013,2014,2015,2016,2017])
+yearsData = list(df.index.year.unique())
+year = st.sidebar.selectbox("Pick a year", yearsData)
 df = df.loc[str(year)]
 
 
