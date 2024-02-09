@@ -19,8 +19,8 @@ df = pd.read_csv(ticker + '.csv', parse_dates=['Date'],index_col=['Date'])
 #year = st.sidebar.selectbox("Pick a year", yearsData)
 minValue = df.index.min()
 maxValue = df.index.max()
-startDate = st.sidebar.date_input("Enter Start Date:", min_value=minValue, format="DD-MMM-YYYY")
-endDate = st.sidebar.date_input("Enter End Date:", max_value=maxValue, format="DD-MMM-YYYY")
+startDate = st.sidebar.date_input("Enter Start Date:", format="YYYY-MM-DD")
+endDate = st.sidebar.date_input("Enter End Date:", format="YYYY-MM-DD")
 df = df.loc[startDate:endDate]
 
 
